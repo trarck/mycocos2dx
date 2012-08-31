@@ -47,26 +47,29 @@ bool HelloWorld::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    // add a label shows "Hello World"
-    // create and initialize a label
-    CCLabelTTF* pLabel = CCLabelTTF::create("Hello World duan", "Arial", 24);
-    // ask director the window size
     CCSize size = CCDirector::sharedDirector()->getWinSize();
 
-    // position the label on the center of the screen
-    pLabel->setPosition( ccp(size.width / 2, size.height - 50) );
+	CCSpriteBatchNode* BatchNode = CCSpriteBatchNode::create("Icon.png", 50);
+	this->addChild(BatchNode, 0);
+	
+	int spriteNumber=3400;
+	float x,y;
+	for(int i=0;i<spriteNumber;i++){
+		x=rand() % (int)size.width;
+		y=rand() % (int)size.height;
+		
+		// add "HelloWorld" splash screen"
+	    CCSprite* pSprite = CCSprite::create("Icon.png");
+		// CCSprite* pSprite = CCSprite::create(BatchNode->getTexture(), CCRectMake(0,0,57,57));
 
-    // add the label as a child to this layer
-    this->addChild(pLabel, 1);
+	    // position the sprite on the center of the screen
+	    pSprite->setPosition( ccp(x, y) );
 
-    // add "HelloWorld" splash screen"
-    CCSprite* pSprite = CCSprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    pSprite->setPosition( ccp(size.width/2, size.height/2) );
-
-    // add the sprite as a child to this layer
-    this->addChild(pSprite, 0);
+	    // add the sprite as a child to this layer
+		this->addChild(pSprite, 0);
+	    // BatchNode->addChild(pSprite, 0);
+	}
+  
     
     return true;
 }
