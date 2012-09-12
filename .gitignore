@@ -5,3 +5,5 @@ proj.android/bin
 proj.android/assets
 /proj.win32/Debug.win32
 /proj.android/obj/convert-dependencies.sh
+/proj.android/libs
+/proj.android/obj
