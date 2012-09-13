@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571A21321601A06C0010D422 /* MyDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 571A21301601A06C0010D422 /* MyDraw.cpp */; };
 		573F752415EDEDD1009FBDE1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573F752315EDEDD1009FBDE1 /* QuartzCore.framework */; };
 		573F752615EDEDD1009FBDE1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573F752515EDEDD1009FBDE1 /* OpenGLES.framework */; };
 		573F752815EDEDD1009FBDE1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573F752715EDEDD1009FBDE1 /* OpenAL.framework */; };
@@ -199,6 +200,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		571A21301601A06C0010D422 /* MyDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyDraw.cpp; sourceTree = "<group>"; };
+		571A21311601A06C0010D422 /* MyDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDraw.h; sourceTree = "<group>"; };
 		573F751F15EDEDD1009FBDE1 /* mycocos2dx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mycocos2dx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		573F752315EDEDD1009FBDE1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		573F752515EDEDD1009FBDE1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -740,6 +743,8 @@
 			isa = PBXGroup;
 			children = (
 				57FE438115EF0D6E00CAA868 /* Scenes */,
+				571A21301601A06C0010D422 /* MyDraw.cpp */,
+				571A21311601A06C0010D422 /* MyDraw.h */,
 				573F77B315EDEFFF009FBDE1 /* AppDelegate.cpp */,
 				573F77B415EDEFFF009FBDE1 /* AppDelegate.h */,
 				573F77B515EDEFFF009FBDE1 /* HelloWorldScene.cpp */,
@@ -1698,6 +1703,7 @@
 				57FE437E15EEFF2500CAA868 /* CCTMXXMLParser.cpp in Sources */,
 				57FE437F15EEFF2500CAA868 /* CCTouchDispatcher.cpp in Sources */,
 				57FE438015EEFF2500CAA868 /* CCTouchHandler.cpp in Sources */,
+				571A21321601A06C0010D422 /* MyDraw.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
