@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "MyDraw.h"
 
 USING_NS_CC;
 
@@ -47,7 +48,31 @@ bool HelloWorld::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    //drawTestSprite();
+	//schedule(schedule_selector(HelloWorld::frameDraw),1.0f);
+    MyDraw* pDraw=new MyDraw();
+	this->addChild(pDraw);
+	pDraw->release();
+    return true;
+}
+
+void HelloWorld::menuCloseCallback(CCObject* pSender)
+{
+    CCDirector::sharedDirector()->end();
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
+}
+
+void HelloWorld::frameDraw(float delta)
+{
+	drawLines();
+}
+
+void HelloWorld::drawTestSprite()
+{
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
 
 	CCSpriteBatchNode* BatchNode = CCSpriteBatchNode::create("Icon.png", 50);
 	this->addChild(BatchNode, 0);
@@ -69,16 +94,14 @@ bool HelloWorld::init()
 		this->addChild(pSprite, 0);
 	    // BatchNode->addChild(pSprite, 0);
 	}
-  
-    
-    return true;
 }
 
-void HelloWorld::menuCloseCallback(CCObject* pSender)
+void HelloWorld::drawLines()
 {
-    CCDirector::sharedDirector()->end();
+	CCLOG("test");
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
+	ccDrawColor4F(1.0f, 0.0f, 0.0f, 1.0f);
+
+	ccDrawLine(ccp(0,0),ccp(size.width,size.height));
 }

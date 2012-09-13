@@ -17,6 +17,10 @@ public:
 
     // implement the "static node()" method manually
     LAYER_CREATE_FUNC(HelloWorld);
+	void frameDraw(float delta);
+private:
+	void drawTestSprite();
+	void drawLines();
 };
 
 #endif // __HELLOWORLD_SCENE_H__
